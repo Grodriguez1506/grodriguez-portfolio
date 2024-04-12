@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>{% block title %}
+
+        {% endblock %} | Gabriel Rodríguez
+    </title>
+    {% load static %}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="favicon/x-icon" href="{% static 'images/positive-vote_1533913.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <header id="header">
+        <div id="wrap">
+            <div id="logo">
+                <a href="{% url 'inicio' %}">GRODRIGUEZ</a> 
+            </div>
+            
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="{% url 'inicio' %}">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'proyectos' %}">Proyectos</a>
+                            <ul>
+                                {% for project in projects %}
+                                
+                                    <li>
+                                        <a href="{% url "proyecto" project.1 %}">{{project.0}}</a>
+                                    </li>
+
+                                {% endfor %}
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="{% url "contacto" %}">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% if messages %}
+        {% for message in messages %}
+        <div class="message">
+            {{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
+    <div id="content">
+        
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    <footer id="footer">
+        <div id="footer-logo">
+            <a href="#">H</a> 
+            <p>&copy; Gabriel Rodríguez  - {%now 'd/m/Y'%}</p>   
+        </div>
+    </footer>
+</body> 
+</html>

@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block title %} Proyectos {% endblock %}
+
+
+{%block content%}
+
+{% load static %}
+<div class="container">
+
+    <h1 class="title">Mis Proyectos</h1>
+
+    <div id="projects">
+        
+        {% for proyecto in proyectos %}
+            <article class="project">
+                    {% if proyecto.image %}
+                        <img src="{{proyecto.image.url}}" alt="{{proyecto.title}}">
+                    {% endif %}
+
+                    <div class="content">
+                        <h3 class="subtitle">{{proyecto.title}}</h3>
+                        <p class="resumen">
+                            {{proyecto.resumen}}
+                        </p>
+                    </div>
+                    <div class="icons">
+                        <a href="{% url "proyecto" proyecto.url %}">
+                            <i title="{{proyecto.title}}" class='bx bx-link'></i>
+                        </a>
+                    </div>
+            </article>
+        {% endfor %}
+    </div>
+
+</div>
+
+{%endblock%}

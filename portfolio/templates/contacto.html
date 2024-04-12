@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% load static %}
+{%block content%}
+<script type="text/javascript" src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/draggable.js' %}"></script>
+{% if formulario.errors %} 
+    <strong class="errors">
+        Hay errores en el formulario de contacto
+    </strong>
+{% endif %}
+
+<section id="container_form">
+
+    <form action="" method="POST">
+        
+        {% csrf_token %}
+
+        <h1>Contáctame</h1>
+
+        {{ formulario }}
+        
+        <input type="submit" value="Enviar mensaje">
+
+    </form>
+</section>
+
+
+{%endblock%}

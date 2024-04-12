@@ -1,0 +1,1244 @@
+@font-face {
+    font-family: 'IconsRegular';
+    src: url('fonts/websymbols-regular-webfont.eot');
+    src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-onetype'),
+        url('fonts/websymbols-regular-webfont.woff') format('woff'),
+        url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ESTILOS GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Dosis", sans-serif;
+}
+
+body{
+    background-color: #eee;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+    padding-right: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 10px;
+    border: 3px solid white
+}
+
+/* CABECERA */
+#header{
+    width: 100%;
+    height: 75px;
+    background-color: #4320ef;
+    font-family: 'Fjalla One', sans-serif;
+    box-shadow: 0px 2px 4px gray, 0px 3px 4px gray, 0px 4px 4px gray;
+}
+
+#header #wrap{
+    display: flex;
+    width: 100%;
+}
+
+#logo{
+    flex-basis: 70%;
+    
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#logo a{
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: 45px;
+    letter-spacing: 2px;
+    text-shadow: 0px 1px 3px black, 0px 2px 3px black, 0px 3px 3px black, 0px 4px 3px black;
+}
+
+#logo:hover p > a{
+    animation: fromLeft 700ms linear;
+}
+
+@keyframes fromLeft{
+    0%{
+        transform: translateX(-500%);
+        /* color: #4320ef; */
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0%);
+        /* color: white; */
+        opacity: 1;
+    }
+}
+
+#logo:hover a{
+    animation: fromUp 600ms linear;
+}
+
+@keyframes fromUp{
+    0%{
+        transform: translateY(-200%);
+        color: #4320ef;
+    }
+
+    20%{
+        transform: translateY(0%);
+        color: white;
+    }
+
+    40%{
+        transform: translateY(-30%);
+        color: white;
+    }
+
+    60%{
+        transform: translateY(0%);
+        color: white;
+    }
+
+    80%{
+        transform: translateY(-15%);
+        color: white;
+    }
+
+    100%{
+        transform: translateY(0%);
+        color: white;
+    }
+}
+
+/* MENU */
+#menu{
+    flex-basis: 30%;;
+    font-family: "Dosis", sans-serif;
+}
+
+#menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    height: 75px;
+    list-style: none;
+    color: white;
+}
+
+#menu > ul > li > a {
+    display: block;
+    padding-bottom: 3px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    transition: all 300ms;
+}
+
+#menu > ul > li:hover > a{
+    transform: scale(1.2);
+    color: white;
+}
+
+/* MENU DESPLEGABLE */
+#menu > ul > li > ul{
+    display: none;
+    position: absolute;
+    right: 11%;
+    width: 140px;
+    z-index: 1;
+}
+
+#menu > ul > li:hover > ul{
+    display: block;
+}
+
+#menu > ul > li:hover > ul > li{
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 15px;
+    background-color: white;
+    transition: all 300ms;
+}
+
+#menu > ul > li:hover > ul > li:last-child{
+    border-radius: 0px 0px 5px 5px;
+}
+
+#menu > ul > li:hover > ul > li a{
+    display: block;
+    text-decoration: none;
+    color: #4320ef;
+}
+
+#menu > ul > li:hover > ul > li:hover{
+    background-color: #e9e5e5;
+}
+
+/* CONTENIDO PRINCIPAL */
+#content{
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 95%;
+    height: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#title {
+    flex-basis: 100%;
+    display: block;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #ccc;
+    border-left: 40px solid #4320ef;
+    border-radius: 10px;
+}
+
+#title h1,
+.title{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 70px;
+    font-weight: lighter;
+    animation: bounce-title 1s linear;
+}
+
+@keyframes bounce-title{
+    0%{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+
+    20%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    40%{
+        transform: translateY(-30%);
+        opacity: 1;
+    }
+
+    60%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    80%{
+        transform: translateY(-15%);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+#title .subtitle{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 45px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    padding-left: 8px;
+
+    transition: all 200ms;
+    animation: bounce-subtitle 1s linear;
+}
+
+@keyframes bounce-subtitle{
+    0%{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+
+    20%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    40%{
+        transform: translateY(-30%);
+        opacity: 1;
+    }
+
+    60%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    80%{
+        transform: translateY(-15%);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.about-me{
+    width: 99%;
+    line-height: 35px;
+    margin: 10px;
+    margin-left: 0px;
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-left: 8px;
+    animation: show-about 1s linear;
+}
+
+@keyframes show-about{
+    0%{
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#skills{
+    flex-basis: 41%;
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    height: 665px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 15px #ccc;
+    border-radius: 10px;
+}
+
+#skills::-webkit-scrollbar {
+    width: 15px;
+    padding-right: 3px;
+}
+
+#skills::-webkit-scrollbar-thumb {
+    background-color: #03b2d3;
+    border-radius: 10px;
+    border: 3.5px solid white
+}
+
+#skills h2{
+    flex-basis: 100%;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 55px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+#skills .images{
+    flex-basis: 10%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#skills > .images > img{
+    width: 80px;
+    margin: 10px;
+    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.734));
+}
+
+#skills > .images > img:nth-child(4){
+    width: 60px;
+}
+
+#skills .level-skills{
+    flex-basis: 10%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#skills .level-skills a {
+    flex-grow: 1;
+    font-family: "Dosis", sans-serif;
+    font-size: 45px;
+}
+
+#loader {
+    flex-basis: 73%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#loader > .border {
+    width: 100%;
+    height: 31px;
+    padding: 2px;
+    border: solid 2px gray;
+    border-radius: 5px;
+    background-color: #ccc;
+    margin-top: 30px;
+}
+
+#loader > .border > .progress-bar{
+    height: 30x;
+    width: 0;
+    line-height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Dosis", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;    
+    background-color: #03b2d3;
+    border: 1px solid gray;
+}
+
+#experiences {
+    flex-basis: 49%;
+    height: 665px;
+    background-color: white;
+    margin: 20px;
+    margin-bottom: 0px;
+    padding: 20px;
+    margin-right: 0px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    border-right: 40px solid #4320ef;
+    box-shadow: 0px 0px 15px #ccc;
+}
+
+#experiences::-webkit-scrollbar {
+    width: 15px;
+    padding-right: 3px;
+}
+
+#experiences::-webkit-scrollbar-thumb {
+    background-color: #03b2d3;
+    border-radius: 10px;
+    border: 3.5px solid white
+}
+
+#experiences h2{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 55px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+#experiences .experience{
+    padding: 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.experience .position{
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.experience .company{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+
+.experience .date{
+    font-family: "Dosis", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #919191;
+}
+
+.experience .functions{
+    margin-top: 10px;
+}
+
+/* CERTIFICADOS */
+#certificates {
+    flex-basis: 100%;
+    height: 300px;
+    background-color: white;
+    margin: 20px 0px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    border-left: 40px solid #4320ef;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #ccc;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#certificates::-webkit-scrollbar {
+    width: 15px;
+    padding-right: 3px;
+}
+
+#certificates::-webkit-scrollbar-thumb {
+    background-color: #03b2d3;
+    border-radius: 10px;
+    border: 3.5px solid white
+}
+
+
+#certificates h2{
+    flex-basis: 100%;
+    font-family: 'Fjalla One', sans-serif;
+    height: 60px;
+    font-size: 55px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+#certificates .course-info {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 157px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 15px #ccc;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#certificates .course-info > img{
+    flex-basis: 20%;
+    background-color: #919191;
+    padding: 10px;
+}
+
+#certificates .course-info > a {
+    flex-basis: 80%;
+    align-self: center;
+    height: 100%;
+    padding-top: 80px;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #999;
+    transition: all 500ms;
+}
+
+#certificates .course-info > a:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+/* PROYECTOS */
+/* FLEXBOX */
+.container{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border-left: 40px solid #4320ef;
+    box-shadow: 0px 0px 15px #ccc;
+}
+
+.container .title{
+    font-family: 'Fjalla One', sans-serif;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+
+#projects{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+}
+
+#projects .project{
+    position: relative;
+    width: 487px;
+    height: 293px;
+    margin: 40px 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 20px #ccc;
+}
+
+#projects .project img{
+    width: 100%;
+    transition: all 500ms;
+}
+
+#projects .project:hover img{
+    transform: scale(1.2);
+}
+#projects .project:hover .content{
+    top: 0;
+}
+
+#projects .project:hover .icons{
+    bottom: 0;
+}
+
+#projects .project .content {
+    height: 220px;
+    width: 100%;
+    position: absolute;
+    top: -300%;
+    background-color: rgba(0, 0, 0, 0.67);
+    color: white;
+    font-family: "Dosis", sans-serif;
+    padding-bottom: 20px;
+    transition: all 500ms;
+}
+
+#projects .project .content .subtitle{
+    font-size: 35px;
+    letter-spacing: 2px;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+#projects .project .content .resumen{
+    height: 150px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px;
+    
+    border-bottom: 1px solid white;
+}
+
+#projects .project .icons{
+    width: 100%;
+    height: 33px;
+    position: absolute;
+    bottom: -100%;
+    background-color: rgba(0, 0, 0, 0.67);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 500ms;
+}
+
+#projects .project .icons i{
+    font-size: 31px;
+    color: white;
+    transition: all 300ms;
+}
+
+#projects .project .icons i:hover{
+    font-size: 31px;
+    animation: rotateIcon 300ms linear;
+}
+
+@keyframes rotateIcon{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(180deg);
+    }
+}
+
+/* PROYECTO */
+#individual-project{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #ccc;
+}
+
+#individual-project .title,
+#individual-project .project-description{
+    margin: 10px;
+}
+
+#individual-project .title{
+    flex-basis: 100%;
+    font-size: 120px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container-slider{
+    flex-basis: 90%;
+    max-width: 900px;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px #fff,
+                0 15px 50px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.slider{
+    display: flex;
+    height: 600px;
+    margin-left: -100%;
+}
+
+.slider__section{
+    width: 100%;
+}
+
+.slider__img{
+    display: block;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__btn:hover{
+    background: black;
+    color: white;
+}
+
+.slider__btn--left{
+    left: 5px;
+}
+
+.slider__btn--right{
+    right: 5px;
+}
+
+/* 
+#individual-project .image-container {
+    flex-basis: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 420px;
+    overflow-y: scroll;
+    position: relative;
+    padding-left: 15px;
+}
+
+
+#individual-project .image-container::-webkit-scrollbar{
+    width: 15px;
+}
+
+#individual-project .image-container::-webkit-scrollbar-thumb{
+    background-color: #03b2d3;
+    border-radius: 2px solid white;
+    border-radius: 20px;
+
+}
+
+#individual-project .image-container img {
+    width: 90%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px #ccc;
+    transition: all 500ms;
+} */
+
+#individual-project .project-description{
+    flex-basis: 100%;
+    font-family: "Dosis", sans-serif;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+
+/* CONTACTO */
+#container_form{
+    flex-basis: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 0px;
+    cursor: pointer;
+}
+
+#container_form form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    padding-right: 30px;
+    border-radius: 10px;
+    border-left: 40px solid #4320ef;
+    box-shadow: 0px 0px 15px #ccc;
+}
+
+#container_form form h1{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 55px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+#container_form form label,
+#container_form form input[type="text"],
+#container_form form input[type="email"],
+#container_form form input[type="button"],
+#container_form form input[type="submit"],
+#container_form form textarea{
+    display: block;
+    margin: 10px 0px;
+}
+
+#container_form form input[type="text"],
+#container_form form input[type="email"]{
+    width: 100%;
+    height: 25px;
+    font-family: "Dosis", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+#container_form form textarea{
+    width: 100%;
+    height: 120px;
+    font-family: "Dosis", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    outline: none;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+#container_form form label{
+    font-size: 22px;
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 1px;
+}
+
+#container_form form label{
+    text-align: left;
+}
+
+#container_form form input[type="button"],
+#container_form form input[type="submit"]{
+    width: 150px;
+    background-color: #4320ef;
+    border: 2px solid white;
+    color: white;
+    font-family: "Dosis", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border:1px solid #4320ef;
+    padding: 8px;
+    cursor: pointer;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    transition: all 300ms;
+}
+
+#container_form form input[type="button"]:hover,
+#container_form form input[type="submit"]:hover{
+    background-color: white;
+    color: #4320ef;
+    border:1px solid #4320ef;
+}
+
+#container_form form input[type="button"]:active,
+#container_form form input[type="submit"]:active{
+    transform: scale(0.96);
+}
+
+/* ERRORES DE FORMULARIO DE CONTACTO */
+.errors {
+    font-family: "Dosis", sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    width: 99.75%;
+    color: white;
+    background: red;
+    text-align: center;
+    padding: 2px;
+    position: absolute;
+    top: 76px;
+    left: 0;
+}
+
+.errorlist{
+    list-style: none;
+}
+
+.errorlist li{
+    font-family: "Dosis", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* MENSAJE FLASH AL INICIO */
+.message {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    top: 10%;
+    left: 0;
+    background-color: #00ff99;
+    color: black;
+    font-family: "Dosis", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 2px 3px gray;
+}
+
+/* FOOTER */
+#footer{
+    width: 100%;
+    background-color: #4320ef;
+    color: white;
+    font-family: "Dosis", sans-serif;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#footer-logo{
+    width: 70%;
+    padding: 10px;
+    margin: 0px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+#footer-logo p{
+    display: inline-block;
+    font-size: 25px;
+}
+
+#footer-logo a{
+    display: inline-block;
+    font-family: 'IconsRegular';
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    margin-right: 12px;
+    text-shadow: 0px 1px 3px black, 0px 2px 3px black, 0px 3px 3px black, 0px 4px 3px black;
+    transition: all 300ms;
+}
+
+#footer-logo a:hover{
+    text-shadow: 0px 1px 3px black, 0px 2px 3px black, 0px 3px 3px black, 0px 4px 3px black, 0px 0px 5px white;
+}
+
+@media(max-width: 1516px){
+
+    #skills {
+        flex-basis: 100%;
+    }
+
+    #experiences {
+        flex-basis: 100%;
+        margin: 20px 0px 0px 0px;
+        height: 320px;
+    }
+
+}
+
+@media(max-width: 1400px){
+    #certificates .course-info {
+        flex-basis: 100%;
+    }
+
+}
+
+@media(max-width: 1165px){
+    #menu > ul > li > ul{
+        right: 9.5%;
+    }
+}
+
+@media(max-width: 1050px){
+
+    #header{
+        height: auto;
+    }
+
+    #header #wrap {
+        display: flex;
+        flex-flow: row wrap
+    }
+
+    #logo {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    #menu {
+        flex-basis: 100%;
+    }
+
+    #menu > ul > li > ul {
+        right: 44%;
+    }
+
+    .errors {
+        top: 153px;
+    }
+
+}
+
+@media(max-width: 832px){
+    #menu > ul > li > ul {
+        right: 42%;
+    }
+}
+
+@media(max-width: 710px){
+
+    #certificates .course-info {
+        align-items: center;
+    }
+    
+    #certificates .course-info > img {
+        width: 129px;
+        height: 81px;
+    }
+}
+
+@media(max-width:650px){
+    #container_form form {  
+        width: 400px;
+    }
+
+    #projects .project {
+        position: relative;
+        width: 380px;
+        height: 230px;
+    }
+
+    #individual-project .title {
+        font-size: 55px;
+    }
+
+    #individual-project .image-container {
+        flex-basis: 100%;
+    }
+
+    .message {
+        font-size: 11px;
+    }
+}
+
+@media(max-width:537px){
+    
+    #footer-logo a {
+        margin-right: 0px;
+    }
+
+    #container_form form {
+        width: 250px;
+    }
+
+    #container_form form h1 {
+        font-size: 45px;
+    }
+    
+    #projects .project {
+        width: 303px;
+        height: 184px;
+    }
+}
+
+@media(max-width:520px){
+    #footer-logo{
+        text-align: center;
+    }
+    #footer-logo a {
+        margin: 0px 0px 10px;
+    }
+
+}
+
+@media(max-width: 501px){
+    #menu > ul > li > ul {
+        right: 39%;
+    }
+}
+
+@media(max-width: 475px){
+    #loader {
+        flex-basis: 50%;
+    }
+
+    .errors {
+        font-size: 17px;
+    }
+
+
+}
+
+@media(max-width: 460px){
+    #certificates .course-info > img {
+        display: none;
+    }
+
+    #certificates h2{
+        font-size: 40px;
+    }
+
+    #footer-logo p {
+        display: block;
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 430px){
+    #experiences h2 {
+        font-size: 45px;
+    }
+}
+
+@media(max-width: 420px){
+    #title h1 {
+        font-size: 60px;
+    }
+    #title .subtitle {
+        font-size: 35px;
+    }
+
+    #projects .project {
+        width: 250px;
+        height: 151px;
+    }
+
+    #title h1, .title {
+        font-size: 60px;
+    }
+}
+
+@media(max-width: 415px){
+
+    #menu > ul > li > ul {
+        right: 36%;
+    }
+
+    #container_form form {
+        width: 220px;
+    }
+
+    .message {
+        font-size: 10px;
+    }
+    
+}
+
+@media(max-width: 360px){
+
+    #title h1, .title {
+        font-size: 50px;
+    }
+
+    #title .subtitle {
+        font-size: 30px;
+    }
+
+    #experiences h2 {
+        font-size: 38px;
+    }
+
+    .experience .position {
+        font-size: 25px;
+    }
+
+    .experience .company {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 20px;
+    }
+
+    #certificates h2 {
+        font-size: 35px;
+    }
+
+    #certificates .course-info {
+        flex-basis: 84%;
+    }
+    
+    #projects .project .content {
+        height: 63%;
+    }
+
+    #projects .project .icons {
+        height: 10.5%;
+    }
+
+    #projects .project .content .subtitle {
+        font-size: 17px;
+    }
+
+    #projects .project .content .resumen {
+        font-size: 11px;
+    }
+    
+    #projects .project .icons i {
+        font-size: 22px;
+    }
+
+    .errors {
+        font-size: 17px;
+        top: 152px;
+    }
+
+    .message {
+            line-height: 25px;
+        }
+
+}
+
+

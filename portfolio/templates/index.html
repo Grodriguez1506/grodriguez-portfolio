@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% load static %}
+
+{%block content%}
+<div id="title">
+    <h1>
+        Soy Gabriel Rodríguez,
+    </h1>
+    <h3 class="subtitle">
+        Desarrollador Python Junior
+    </h3>
+    <div class="about-me">
+        <p>
+            Soy estudiante autodidacta de programación orientado al desarrollo web con el Framework Django de Python, soy
+            proactivo y con muchas ganas de aprender muchas más tecnologías y lenguajes para convertirme en Desarrollador
+            Full Stack en un futuro. Me caracterizo por tener curiosidad por aprender las tecnologías más punteras del sector y posteriormente
+            aplicarlas en los proyectos que desarrollo.
+        </p>
+    </div>
+</div>
+
+<section id="skills">
+    <h2>Habilidades</h2>
+
+    <div class="images">
+        <img src="{%static 'images/html_logo.png' %}" alt="">
+        <img src="{%static 'images/css_logo.png' %}" alt="">
+        <img src="{%static 'images/python_logo.png' %}" alt="">
+        <img src="{%static 'images/django_logo.png' %}" alt="">
+        <img src="{%static 'images/tkinter_logo.png' %}" alt="">
+        <img src="{%static 'images/mysql.png' %}" alt="">
+        <img src="{%static 'images/javascript.png' %}" alt="">
+    </div>
+
+    <div id="loader">
+        <div class="border">
+            <div id="html-bar" class="progress-bar html-bar">0%</div>
+        </div>
+        <div class="border">
+            <div id="css-bar" class="progress-bar css-bar">0%</div>
+        </div>
+        <div class="border">
+            <div id="python-bar" class="progress-bar python-bar">0%</div>
+        </div>
+        <div class="border">
+            <div id="django-bar" class="progress-bar django-bar">0%</div>
+        </div>
+        <div class="border">
+            <div id="tkinter-bar" class="progress-bar tkinter-bar">0%</div>
+        </div>
+        <div class="border">
+            <div id="mysql-bar" class="progress-bar mysql-bar">0%</div>
+        </div>
+        <div class="border">
+            <div id="javascript-bar" class="progress-bar">0%</div>
+        </div>
+</section>
+
+<section id="experiences">
+    <h2>Experiencias</h2>
+    {% for experience in experiences %}
+
+    <div class="experience">
+        <h3 class="position">{{experience.position}}</h3>
+        <h4 class="company">{{experience.company}}</h4>
+        <span class="date">{{experience.since}} - {{experience.to}}</span>
+        <div class="espacio"></div>
+        <p class="functions">
+            {{experience.functions|safe}}
+        </p>
+    </div>
+
+    {% endfor %}
+</section>
+
+<section id="certificates">
+    <h2>Ceritificados</h2>
+    
+    {% for certificate in certificates  %}
+
+        <div class="course-info">
+            {% if certificate.image %}
+                    <img src="{{certificate.image.url}}" alt="">
+            {% endif %}
+                <a href="{{certificate.link}}" target="_blank">{{certificate.title}}</a>
+        </div>
+    {% endfor %}
+
+</section>
+<script type="text/javascript" src="{% static 'js/loaders.js' %}"></script>
+{%endblock%}
