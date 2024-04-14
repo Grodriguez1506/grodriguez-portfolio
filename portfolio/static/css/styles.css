@@ -16,6 +16,10 @@
     font-family: "Dosis", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #eee;
 }
