@@ -11,7 +11,6 @@ class ContactAdmin(admin.ModelAdmin):
 
 class CertificateAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at',)
-    fields = ['image']
 
 
 admin.site.register(Project, ProjectAdmin)
