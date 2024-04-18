@@ -82,7 +82,7 @@
     {% for certificate in certificates  %}
 
         <div class="course-info">
-            {% if certificate.image %}
+            {% if certificate.image != 'null' and certificate.image.url|length >= 1 %}
                     <img src="{{certificate.image.url}}" alt="">
             {% endif %}
                 <a href="{{certificate.link}}" target="_blank">{{certificate.title}}</a>
