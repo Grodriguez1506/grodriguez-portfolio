@@ -136,4 +136,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Media files
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'https://grodportfolio.onrender.com/project/src/media/certificates'
+MEDIA_ROOT = 'https://grodportfolio.onrender.com/project/src/media'
