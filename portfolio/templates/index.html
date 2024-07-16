@@ -61,7 +61,7 @@
 
 <section id="experiences">
     <h2>Experiencias</h2>
-    {% for experience in experiences %}
+    <!-- {% for experience in experiences %}
 
     <div class="experience">
         <h3 class="position">{{experience.position}}</h3>
@@ -73,13 +73,27 @@
         </p>
     </div>
 
-    {% endfor %}
+    {% endfor %} -->
+
+    <div class="experience">
+        <h3 class="position">Desarrollador Freelance Python</h3>
+        <h4 class="company">RCC Ingeniería y Proyectos SAS</h4>
+        <span class="date">01/04/2023 - 27/11/2023</span>
+        <div class="espacio"></div>
+        <p class="functions">
+            - Levantamiento de procedimientos <br>
+            - Desarrollo de software de escritorio personalizado con el Framework Tkinter <br>
+            - Creación de Base de datos relacional en MySql y vinculación a la App <br>
+            - Gestión de base de datos mediante el SGBD MySql Workbench <br>
+            - Soporte técnico de los bugs reportados por el usuario y mantenimiento semestral a la base de datos <br>
+        </p>
+    </div>
 </section>
 
 <section id="certificates">
     <h2>Certificados</h2>
     
-    {% for certificate in certificates  %}
+    <!-- {% for certificate in certificates  %}
 
         <div class="course-info">
             {% if certificate.image != 'null' and certificate.image.url|length >= 1 %}
@@ -87,7 +101,17 @@
             {% endif %}
                 <a href="{{certificate.link}}" target="_blank">{{certificate.title}}</a>
         </div>
-    {% endfor %}
+    {% endfor %} -->
+
+    <div class="course-info">
+        <img src="{% static 'images/udemy_logo.png' %}" alt="">
+        <a href="https://www.udemy.com/certificate/UC-fc28dbef-10f2-4512-9d2c-4f21d55f5582/" target="_blank">Master en Python</a>
+    </div>
+
+    <div class="course-info">
+        <img src="{% static 'images/udemy_logo.png' %}" alt="">
+        <a href="https://www.udemy.com/certificate/UC-ddb744bb-950a-4a8b-a041-4f080a26940e/" target="_blank">Master en CSS</a>
+    </div>
 
 </section>
 <script type="text/javascript" src="{% static 'js/loaders.js' %}"></script>
