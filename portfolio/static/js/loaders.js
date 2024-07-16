@@ -12,10 +12,10 @@ function barraProgreso(id, limite){
     }, 60)
     }
     
-    barraProgreso('#html-bar', 62);
-    barraProgreso('#css-bar', 68);
-    barraProgreso('#python-bar', 82);
-    barraProgreso('#django-bar', 75);
-    barraProgreso('#tkinter-bar', 93);
-    barraProgreso('#mysql-bar', 70);
+    barraProgreso('#html-bar', 51);
+    barraProgreso('#css-bar', 47);
+    barraProgreso('#python-bar', 42);
+    barraProgreso('#django-bar', 45);
+    barraProgreso('#tkinter-bar', 73);
+    barraProgreso('#mysql-bar', 35);
     barraProgreso('#javascript-bar', 20);
