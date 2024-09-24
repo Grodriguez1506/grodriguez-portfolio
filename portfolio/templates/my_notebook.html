@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %} {{proyecto.title}}{% endblock %}
+{% block title %}My Notebook{% endblock %}
 
 
 {% block content %}
@@ -8,20 +8,19 @@
 
     <div id="individual-project">
 
-        <h1 class="title">{{proyecto.title}}</h1>
+        <h1 class="title">My Notebook</h1>
 
         <div class="container-slider">
             <div class="slider" id="slider">
                 <div class="slider__section">
-                    <img class="slider__img" src="{{proyecto.image.url}}" alt="{{proyecto.title}}" title="{{proyecto.title}}">
+                    <img class="slider__img" src="{% static "images/my_notebook1.png" %}" alt="My Notebook" title="My Notebook">
                 </div>
-                {% if imagenes %}
-                    {% for imagen in imagenes %}
-                        <div class="slider__section">
-                            <img class="slider__img" src="{{imagen.image.url}}" alt="{{proyecto.title}}" title="{{imagen.description}}">
-                        </div>
-                    {% endfor %}
-                {% endif %}                
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/my_notebook2.png" %}" alt="My Notebook" title="My Notebook">
+                </div>
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/my_notebook3.png" %}" alt="My Notebook" title="My Notebook">
+                </div>
             </div>
             <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
             <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>

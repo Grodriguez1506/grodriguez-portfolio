@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}Scrum Manager{% endblock %}
+
+
+{% block content %}
+{% load static %}
+
+    <div id="individual-project">
+
+        <h1 class="title">Scrum Manager</h1>
+
+        <div class="container-slider">
+            <div class="slider" id="slider">
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager1.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div>
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager2.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div>
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager3.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager4.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager5.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager6.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager7.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager8.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager9.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager10.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager11.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager12.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div>
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager13.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div>       
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager14.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+                <div class="slider__section">
+                    <img class="slider__img" src="{% static "images/scrum_manager15.png" %}" alt="Scrum Manager" title="Scrum Manager">
+                </div> 
+            </div>
+            <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+            <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+        </div>
+
+        <!-- <div class="image-container">
+            <img src="{{proyecto.image.url}}" alt="{{proyecto.title}}" title="{{proyecto.title}}">
+            {% if imagenes %}
+                {% for imagen in imagenes %}
+                    <img src="{{imagen.image.url}}" alt="{{proyecto.title}}" title="{{imagen.description}}">
+                {% endfor %}
+            {% endif %}
+        </div> -->
+
+        <p class="project-description">
+            {{proyecto.description}}
+        </p>
+
+    </div>
+
+<script type="text/javascript" src="{% static 'js/slider.js' %}"></script>
+{% endblock %}

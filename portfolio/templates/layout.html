@@ -33,13 +33,15 @@
                     <li>
                         <a href="{% url 'proyectos' %}">Proyectos</a>
                             <ul>
-                                {% for project in projects %}
-                                
-                                    <li>
-                                        <a href="{% url "proyecto" project.1 %}">{{project.0}}</a>
-                                    </li>
-
-                                {% endfor %}
+                                <li>
+                                    <a href="{% url "scrum-manager" %}">Scrum Manager</a>
+                                </li>
+                                <li>
+                                    <a href="{% url "password-generator" %}">Password Generator</a>
+                                </li>
+                                <li>
+                                    <a href="{% url "my-notebook" %}">My Notebook</a>
+                                </li>
                             </ul>
                     </li>
                     <li>

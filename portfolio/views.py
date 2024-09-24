@@ -46,17 +46,6 @@ def proyectos(request):
         'proyectos': proyectos
     })
 
-def proyecto(request, url):
-
-    proyecto = Project.objects.get(url=url)
-
-    imagenes = ProjectImages.objects.filter(belongsTo=url)
-
-    return render(request,"proyecto.html", {
-        'proyecto': proyecto,
-        'imagenes': imagenes
-    })
-
 
 def contacto(request):
 
@@ -101,3 +90,17 @@ def save(request):
         messages.success(request, f'Perfecto {solicitud.name}, Solicitud de contacto "{solicitud.title}" realizada con éxito!!')
         
         return redirect('inicio')
+    
+# PROYECTOS
+
+def scrum_manager(request):
+
+    return render(request,"scrum_manager.html")
+
+def password_generator(request):
+
+    return render(request,"password_generator.html")
+
+def my_notebook(request):
+
+    return render(request,"my_notebook.html")
